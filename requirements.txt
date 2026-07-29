@@ -5,3 +5,10 @@ pydantic
 python-multipart
 jinja2
 aiofiles
+
+joblib
+pandas
+numpy
+scikit-learn
+
+python-dotenv
