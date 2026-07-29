@@ -1,0 +1,4 @@
+trainingDays: "",
+trainingHours: "",
+matchMinutes: "",
+trainingIntensity: "",
