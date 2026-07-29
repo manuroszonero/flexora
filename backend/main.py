@@ -8,6 +8,17 @@ import joblib
 import pandas as pd
 
 app = FastAPI(title="FootballGuard AI API")
+origins = [
+    "https://flexora-six.vercel.app",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 Base.metadata.create_all(bind=engine)
 
