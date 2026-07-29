@@ -8,7 +8,10 @@ import joblib
 import pandas as pd
 
 app = FastAPI(title="FootballGuard AI API")
+
 origins = [
+    "http://localhost:5173",
+    "http://localhost:5174",
     "https://flexora-six.vercel.app",
 ]
 
@@ -41,20 +44,6 @@ print("=" * 50)
 print("Flexora ML Model Loaded!")
 print("=" * 50)
 
-# ----------------------------------
-# CORS
-# ----------------------------------
-
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "http://localhost:5174",
-    ],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # ----------------------------------
 # Helper Functions
